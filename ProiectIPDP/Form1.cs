@@ -13,17 +13,17 @@ namespace ProiectIPDP
 {
     public partial class Form1 : Form
     {
+        private OleDbConnection connection = new OleDbConnection();
         public Form1()
         {
             InitializeComponent();
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=LogInInfo.accdb;Persist Security Info=False;";
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             try
             {
-                OleDbConnection connection = new OleDbConnection();
-                connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=LogInInfo.accdb;Persist Security Info=False;";
                 connection.Open();
                 checkConnection.Text = "Connection Successful";
                 connection.Close();
