@@ -8,3 +8,5 @@ F:\Proiecte\ProiectI PDP\ProiectIPDP\obj\Debug\ProiectIPDP.csproj.GenerateResour
 F:\Proiecte\ProiectI PDP\ProiectIPDP\obj\Debug\ProiectIPDP.csproj.CoreCompileInputs.cache
 F:\Proiecte\ProiectI PDP\ProiectIPDP\obj\Debug\ProiectIPDP.exe
 F:\Proiecte\ProiectI PDP\ProiectIPDP\obj\Debug\ProiectIPDP.pdb
+F:\Proiecte\ProiectI PDP\ProiectIPDP\obj\Debug\ProiectIPDP.Form2.resources
+F:\Proiecte\ProiectI PDP\ProiectIPDP\obj\Debug\ProiectIPDP.Form3.resources

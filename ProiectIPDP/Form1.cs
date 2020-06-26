@@ -17,7 +17,7 @@ namespace ProiectIPDP
         public Form1()
         {
             InitializeComponent();
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=LogInInfo.accdb;Persist Security Info=False;";
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Info.accdb;Persist Security Info=False;";
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace ProiectIPDP
             connection.Open();
             OleDbCommand command = new OleDbCommand();
             command.Connection = connection;
-            command.CommandText = "select * from Info where UserName ='"+txt_Username.Text+"' and Password ='"+txt_Password.Text+"'";
+            command.CommandText = "select * from Account_Info where Username ='"+txt_Username.Text+"' and Password ='"+txt_Password.Text+"'";
             OleDbDataReader reader = command.ExecuteReader();
             int count = 0;
             while(reader.Read())
@@ -51,16 +51,30 @@ namespace ProiectIPDP
             if(count==1)
             {
                 MessageBox.Show("Log In Successful");
+                connection.Close();
+                connection.Dispose();
+                this.Hide();
+                Form2 f2 = new Form2();
+                f2.ShowDialog();
             }
             else if (count > 1)
             {
-                MessageBox.Show("There is a duplicate of the Username and Password in the Database");
+                MessageBox.Show("There is a duplicate of the username and password in the database");
             }
             else
             {
                 MessageBox.Show("Invalid Username or Password");
             }
             connection.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            connection.Close();
+            connection.Dispose();
+            this.Hide();
+            Form3 f3 = new Form3();
+            f3.ShowDialog();
         }
     }
 }

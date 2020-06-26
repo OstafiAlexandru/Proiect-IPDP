@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txt_Username = new System.Windows.Forms.TextBox();
             this.txt_Password = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // checkConnection
@@ -48,7 +49,7 @@
             // btn_Login
             // 
             this.btn_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Login.Location = new System.Drawing.Point(368, 342);
+            this.btn_Login.Location = new System.Drawing.Point(270, 340);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(119, 52);
             this.btn_Login.TabIndex = 1;
@@ -89,14 +90,27 @@
             this.txt_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Password.Location = new System.Drawing.Point(421, 234);
             this.txt_Password.Name = "txt_Password";
+            this.txt_Password.PasswordChar = '*';
             this.txt_Password.Size = new System.Drawing.Size(205, 34);
             this.txt_Password.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(458, 340);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(168, 52);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Create Account";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(898, 536);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txt_Password);
             this.Controls.Add(this.txt_Username);
             this.Controls.Add(this.label2);
@@ -104,7 +118,7 @@
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.checkConnection);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Log In";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -119,6 +133,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_Username;
         private System.Windows.Forms.TextBox txt_Password;
+        private System.Windows.Forms.Button button1;
     }
 }
 
