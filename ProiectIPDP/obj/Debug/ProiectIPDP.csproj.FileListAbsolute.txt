@@ -1,0 +1,10 @@
+F:\Proiecte\ProiectI PDP\ProiectIPDP\bin\Debug\ProiectIPDP.exe.config
+F:\Proiecte\ProiectI PDP\ProiectIPDP\bin\Debug\ProiectIPDP.exe
+F:\Proiecte\ProiectI PDP\ProiectIPDP\bin\Debug\ProiectIPDP.pdb
+F:\Proiecte\ProiectI PDP\ProiectIPDP\obj\Debug\ProiectIPDP.csprojAssemblyReference.cache
+F:\Proiecte\ProiectI PDP\ProiectIPDP\obj\Debug\ProiectIPDP.Form1.resources
+F:\Proiecte\ProiectI PDP\ProiectIPDP\obj\Debug\ProiectIPDP.Properties.Resources.resources
+F:\Proiecte\ProiectI PDP\ProiectIPDP\obj\Debug\ProiectIPDP.csproj.GenerateResource.cache
+F:\Proiecte\ProiectI PDP\ProiectIPDP\obj\Debug\ProiectIPDP.csproj.CoreCompileInputs.cache
+F:\Proiecte\ProiectI PDP\ProiectIPDP\obj\Debug\ProiectIPDP.exe
+F:\Proiecte\ProiectI PDP\ProiectIPDP\obj\Debug\ProiectIPDP.pdb
