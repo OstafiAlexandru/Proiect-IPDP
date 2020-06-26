@@ -35,7 +35,7 @@ namespace ProiectIPDP
 
             if (count >= 1)
             {
-                MessageBox.Show("This account already exists");
+                MessageBox.Show("This user already exists");
             }
 
             else if(txt_Password.Text != txt_ConfirmP.Text)
@@ -46,9 +46,14 @@ namespace ProiectIPDP
             {
                 OleDbCommand command2 = new OleDbCommand();
                 command2.Connection = connection;
-                command2.CommandText = "insert into Account_Info ([Username],[Prenume],[Nume],[Data_Nasterii],[Password],[Data_Crearii_Contului]) values('" + txt_Username.Text + "','" + txt_FName.Text + "','" + txt_LName.Text + "','" + txt_Birthday.Text + "','" + txt_Password.Text + "','"+DateTime.Today+"')";
+                command2.CommandText = "insert into Account_Info ([Username],[Prenume],[Nume],[Data_Nasterii],[Password],[Data_Crearii_Contului],[Status]) values('" + txt_Username.Text + "','" + txt_FName.Text + "','" + txt_LName.Text + "','" + txt_Birthday.Text + "','" + txt_Password.Text + "','"+DateTime.Today+"','Online')";
                 command2.ExecuteNonQuery();
                 MessageBox.Show("Account succesfully created");
+                connection.Close();
+                connection.Dispose();
+                this.Hide();
+                Form2 f2 = new Form2();
+                f2.ShowDialog();
             }
             connection.Close();
         }

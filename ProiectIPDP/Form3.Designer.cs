@@ -47,7 +47,7 @@
             // 
             this.Username.AutoSize = true;
             this.Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Username.Location = new System.Drawing.Point(113, 17);
+            this.Username.Location = new System.Drawing.Point(178, 13);
             this.Username.Name = "Username";
             this.Username.Size = new System.Drawing.Size(97, 24);
             this.Username.TabIndex = 0;
@@ -57,7 +57,7 @@
             // 
             this.FName.AutoSize = true;
             this.FName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FName.Location = new System.Drawing.Point(113, 75);
+            this.FName.Location = new System.Drawing.Point(174, 71);
             this.FName.Name = "FName";
             this.FName.Size = new System.Drawing.Size(101, 24);
             this.FName.TabIndex = 1;
@@ -67,7 +67,7 @@
             // 
             this.LName.AutoSize = true;
             this.LName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LName.Location = new System.Drawing.Point(113, 134);
+            this.LName.Location = new System.Drawing.Point(176, 130);
             this.LName.Name = "LName";
             this.LName.Size = new System.Drawing.Size(99, 24);
             this.LName.TabIndex = 2;
@@ -77,7 +77,7 @@
             // 
             this.Password.AutoSize = true;
             this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password.Location = new System.Drawing.Point(113, 249);
+            this.Password.Location = new System.Drawing.Point(183, 245);
             this.Password.Name = "Password";
             this.Password.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Password.Size = new System.Drawing.Size(92, 24);
@@ -88,7 +88,7 @@
             // 
             this.Birthday.AutoSize = true;
             this.Birthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Birthday.Location = new System.Drawing.Point(113, 194);
+            this.Birthday.Location = new System.Drawing.Point(165, 190);
             this.Birthday.Name = "Birthday";
             this.Birthday.Size = new System.Drawing.Size(110, 24);
             this.Birthday.TabIndex = 4;

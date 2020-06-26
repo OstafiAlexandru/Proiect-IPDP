@@ -24,9 +24,26 @@ namespace ProiectIPDP
         {
             try
             {
+
                 connection.Open();
+                OleDbCommand command1 = new OleDbCommand();
+                command1.Connection = connection;
+                command1.CommandText = "select * from Account_Info where Status ='Online'";
+                int counter = 0;
+                OleDbDataReader reader1 = command1.ExecuteReader();
+                while (reader1.Read())
+                {
+                    counter = counter + 1;
+                }
+                if (counter == 1)
+                {
+                    connection.Close();
+                    connection.Dispose();
+                    this.Hide();
+                    Form2 f2 = new Form2();
+                    f2.ShowDialog();
+                }
                 checkConnection.Text = "Connection Successful";
-                connection.Close();
             }catch(Exception ex)
             {
                 MessageBox.Show("Error: " + ex);
@@ -37,13 +54,13 @@ namespace ProiectIPDP
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            OleDbCommand command = new OleDbCommand();
-            command.Connection = connection;
-            command.CommandText = "select * from Account_Info where Username ='"+txt_Username.Text+"' and Password ='"+txt_Password.Text+"'";
-            OleDbDataReader reader = command.ExecuteReader();
+            
+            OleDbCommand command2 = new OleDbCommand();
+            command2.Connection = connection;
+            command2.CommandText = "select * from Account_Info where Username ='"+txt_Username.Text+"' and Password ='"+txt_Password.Text+"'";
+            OleDbDataReader reader2 = command2.ExecuteReader();
             int count = 0;
-            while(reader.Read())
+            while(reader2.Read())
             {
                 count = count + 1;
             }
@@ -51,6 +68,10 @@ namespace ProiectIPDP
             if(count==1)
             {
                 MessageBox.Show("Log In Successful");
+                OleDbCommand command3 = new OleDbCommand();
+                command3.Connection = connection;
+                command3.CommandText = "update Account_Info set [Status] = 'Online' where [Username] ='"+txt_Username.Text+"'";
+                command3.ExecuteNonQuery();
                 connection.Close();
                 connection.Dispose();
                 this.Hide();
@@ -59,7 +80,7 @@ namespace ProiectIPDP
             }
             else if (count > 1)
             {
-                MessageBox.Show("There is a duplicate of the username and password in the database");
+                MessageBox.Show("There is a duplicate of the account in the database");
             }
             else
             {
