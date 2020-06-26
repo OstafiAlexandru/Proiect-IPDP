@@ -33,5 +33,34 @@ namespace ProiectIPDP
 
             }
         }
+
+
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            OleDbCommand command = new OleDbCommand();
+            command.Connection = connection;
+            command.CommandText = "select * from Info where UserName ='"+txt_Username.Text+"' and Password ='"+txt_Password.Text+"'";
+            OleDbDataReader reader = command.ExecuteReader();
+            int count = 0;
+            while(reader.Read())
+            {
+                count = count + 1;
+            }
+
+            if(count==1)
+            {
+                MessageBox.Show("Log In Successful");
+            }
+            else if (count > 1)
+            {
+                MessageBox.Show("There is a duplicate of the Username and Password in the Database");
+            }
+            else
+            {
+                MessageBox.Show("Invalid Username or Password");
+            }
+            connection.Close();
+        }
     }
 }
